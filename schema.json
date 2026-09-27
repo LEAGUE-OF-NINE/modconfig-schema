@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/mod-config.json",
+  "title": "Mod Configuration",
+  "description": "Schema for the mods config.json",
+  "type": "object",
+  "properties": {
+    "modID": {
+      "type": "integer",
+      "description": "The unique identifier of the mod, put as template."
+    },
+    "modName": {
+      "type": "string",
+      "description": "The name of the mod, defaults to the folder name if empty."
+    },
+    "modVersion": {
+      "type": "number",
+      "description": "The version of the mod, just for show in the file, only used to keep tracks."
+    },
+    "excludedFilesList": {
+      "type": "array",
+      "description": "List of excluded files, put their extensions if you don't excluse a folder (folder is only available for custom stories, encounters and sound).",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "dependenciesList": {
+      "type": "array",
+      "description": "List of mod dependencies (based on the modName).",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "bonusNodes": {
+      "type": "object",
+      "description": "Additional nodes in case other mods would use configs, can be anything.",
+      "additionalProperties": {
+        "type": "object"
+      },
+      "default": {}
+    }
+  },
+  "required": [
+  ],
+  "additionalProperties": false
+}
