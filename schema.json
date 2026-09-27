@@ -1,8 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.com/schemas/mod-config.json",
-  "title": "Mod Configuration",
-  "description": "Schema for the mods config.json",
+  "title": "Mod Configuration Definition",
   "type": "object",
   "properties": {
     "modID": {
